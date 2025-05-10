@@ -1,0 +1,38 @@
+:root {
+  --black: #222831;
+  --grey: #393e46;
+  --teal: #00ADB5;
+  --white: #eeeeee;
+}
+
+.bg-black {
+  background-color: var(--black);
+}
+
+.bg-grey {
+  background-color: var(--grey);
+}
+
+.bg-teal {
+  background-color: var(--teal);
+}
+
+.bg-white {
+  background-color: var(--white);
+}
+
+.text-black {
+  color: var(--black);
+}
+
+.text-grey {
+  color: var(--grey);
+}
+
+.text-teal {
+  color: var(--teal);
+}
+
+.text-white {
+  color: var(--white);
+}
