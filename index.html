@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Showcase de Utilidades</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <style>
+        body {
+            font-family: sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        h1, h2 {
+            color: #333;
+            border-bottom: 2px solid #00ADB5;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+
+        h2 {
+            border-bottom-color: #eeeeee;
+        }
+
+        .section {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .example-container {
+            border: 2px dashed #ccc;
+            padding: 15px;
+            margin-top: 15px;
+            min-height: 80px;
+            background-color: #e9e9e9;
+        }
+
+        .example-box {
+            background-color: #00ADB5;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #222831;
+            min-width: 50px;
+            min-height: 30px;
+            box-sizing: border-box;
+        }
+
+        .example-box:first-child {
+            background-color: #393e46;
+        }
+
+        .flex-items-stretch .example-box {
+            min-height: auto;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>Showcase de Utilidades CSS</h1>
+
+    <h2>Flexbox</h2>
+
+    <div class="section">
+        <h3>Dirección Flex (`.flex`, `.flex-row`, `.flex-col`)</h3>
+        <p>Aplica <code>.flex</code> al contenedor y luego <code>.flex-row</code> o <code>.flex-col</code>.</p>
+
+        <p><code>.flex</code> (por defecto: flex-direction: column)</p>
+        <div class="example-container flex">
+            <div class="example-box">Caja 1</div>
+            <div class="example-box">Caja 2</div>
+            <div class="example-box">Caja 3</div>
+        </div>
+
+        <p><code>.flex .flex-row</code></p>
+        <div class="example-container flex flex-row">
+            <div class="example-box">Caja 1</div>
+            <div class="example-box">Caja 2</div>
+            <div class="example-box">Caja 3</div>
+        </div>
+
+        <p><code>.flex .flex-col</code></p>
+        <div class="example-container flex flex-col">
+            <div class="example-box">Caja 1</div>
+            <div class="example-box">Caja 2</div>
+            <div class="example-box">Caja 3</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h3>Justificación del Contenido (`.justify-*`)</h3>
+        <p>Aplica estas clases al contenedor <code>.flex</code> para alinear los ítems a lo largo del eje principal.</p>
+
+        <p><code>.flex .justify-start</code> (por defecto)</p>
+        <div class="example-container flex justify-start flex-row"> <div class="example-box">1</div>
+            <div class="example-box">2</div>
+            <div class="example-box">3</div>
+        </div>
+
+        <p><code>.flex .justify-center</code></p>
+        <div class="example-container flex justify-center flex-row">
+            <div class="example-box">1</div>
+            <div class="example-box">2</div>
+            <div class="example-box">3</div>
+        </div>
+
+        <p><code>.flex .justify-end</code></p>
+        <div class="example-container flex justify-end flex-row">
+            <div class="example-box">1</div>
+            <div class="example-box">2</div>
+            <div class="example-box">3</div>
+        </div>
+
+        <p><code>.flex .justify-between</code></p>
+        <div class="example-container flex justify-between flex-row">
+            <div class="example-box">1</div>
+            <div class="example-box">2</div>
+            <div class="example-box">3</div>
+        </div>
+
+        <p><code>.flex .justify-around</code></p>
+        <div class="example-container flex justify-around flex-row">
+            <div class="example-box">1</div>
+            <div class="example-box">2</div>
+            <div class="example-box">3</div>
+        </div>
+
+        <p><code>.flex .justify-evenly</code></p>
+        <div class="example-container flex justify-evenly flex-row">
+            <div class="example-box">1</div>
+            <div class="example-box">2</div>
+            <div class="example-box">3</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h3>Alineación de los Ítems (`.items-*`)</h3>
+        <p>Aplica estas clases al contenedor <code>.flex</code> para alinear los ítems a lo largo del eje cruzado.</p>
+        <p>Requiere que el contenedor tenga altura suficiente para que la alineación sea visible.</p>
+
+        <p><code>.flex .items-start</code></p>
+        <div class="example-container flex items-start flex-row" style="min-height: 120px;">
+            <div class="example-box">1</div>
+            <div class="example-box">2</div>
+            <div class="example-box">3</div>
+        </div>
+
+        <p><code>.flex .items-center</code></p>
+        <div class="example-container flex items-center flex-row" style="min-height: 120px;">
+            <div class="example-box">1</div>
+            <div class="example-box">2</div>
+            <div class="example-box">3</div>
+        </div>
+
+        <p><code>.flex .items-end</code></p>
+        <div class="example-container flex items-end flex-row" style="min-height: 120px;">
+            <div class="example-box">1</div>
+            <div class="example-box">2</div>
+            <div class="example-box">3</div>
+        </div>
+         </div>
+
+     <div class="section">
+        <h3>Espacio entre Ítems (`.gap-*`)</h3>
+        <p>Aplica estas clases al contenedor <code>.flex</code> o <code>.grid</code> para añadir espacio entre los ítems.</p>
+
+        <p><code>.flex .flex-row .gap-sm</code></p>
+        <div class="example-container flex flex-row gap-sm">
+            <div class="example-box">1</div>
+            <div class="example-box">2</div>
+            <div class="example-box">3</div>
+        </div>
+
+         <p><code>.flex .flex-col .gap-md</code></p>
+        <div class="example-container flex flex-col gap-md">
+            <div class="example-box">1</div>
+            <div class="example-box">2</div>
+            <div class="example-box">3</div>
+        </div>
+    </div>
+
+
+    <h2>Grid</h2>
+
+    <div class="section">
+        <h3>Grid Básico y Columnas (`.grid`, `.grid-cols-*`)</h3>
+        <p>Aplica <code>.grid</code> al contenedor y <code>.grid-cols-N</code> para definir el número de columnas.</p>
+
+        <p><code>.grid .grid-cols-3</code></p>
+        <div class="example-container grid grid-cols-3 gap-sm"> <div class="example-box">1</div>
+            <div class="example-box">2</div>
+            <div class="example-box">3</div>
+            <div class="example-box">4</div>
+            <div class="example-box">5</div>
+            <div class="example-box">6</div>
+        </div>
+
+        <p><code>.grid .grid-cols-5</code></p>
+         <div class="example-container grid grid-cols-5 gap-sm">
+            <div class="example-box">1</div>
+            <div class="example-box">2</div>
+            <div class="example-box">3</div>
+            <div class="example-box">4</div>
+            <div class="example-box">5</div>
+            <div class="example-box">6</div>
+            <div class="example-box">7</div>
+        </div>
+    </div>
+
+     <div class="section">
+        <h3>Espacio entre Celdas (`.gap-*`)</h3>
+        <p>Las mismas clases `.gap-*` funcionan para Grid.</p>
+
+        <p><code>.grid .grid-cols-4 .gap-lg</code></p>
+        <div class="example-container grid grid-cols-4 gap-lg">
+            <div class="example-box">1</div>
+            <div class="example-box">2</div>
+            <div class="example-box">3</div>
+            <div class="example-box">4</div>
+            <div class="example-box">5</div>
+            <div class="example-box">6</div>
+        </div>
+    </div>
+
+
+    <div class="section">
+        <h3>Expansión de Ítems (`.col-span-*`, `.row-span-*`)</h3>
+        <p>Aplica estas clases a los <strong>ítems</strong> dentro de un contenedor <code>.grid</code>.</p>
+
+        <p><code>.grid .grid-cols-6</code> con <code>.col-span-3</code> y <code>.col-span-2</code> en ítems.</p>
+        <div class="example-container grid grid-cols-6 gap-sm">
+            <div class="example-box col-span-3">.col-span-3</div> <div class="example-box">1</div>
+            <div class="example-box col-span-2">.col-span-2</div> <div class="example-box">2</div>
+            <div class="example-box">3</div>
+            <div class="example-box">4</div>
+        </div>
+
+         <p><code>.grid .grid-cols-4</code> con <code>.row-span-2</code> en un ítem.</p>
+        <div class="example-container grid grid-cols-4 gap-sm" style="min-height: 150px;"> <div class="example-box">1</div>
+            <div class="example-box row-span-2">.row-span-2</div> <div class="example-box">2</div>
+            <div class="example-box">3</div>
+            <div class="example-box">4</div>
+            <div class="example-box">5</div>
+            <div class="example-box">6</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h3>Posicionamiento de Ítems (`.col-start-*`, `.row-start-*`, `.col-end-*`, `.row-end-*`)</h3>
+        <p>Aplica estas clases a los <strong>ítems</strong> dentro de un contenedor <code>.grid</code> para posicionarlos en líneas específicas.</p>
+
+        <p><code>.grid .grid-cols-4</code> con <code>.col-start-2</code> y <code>.col-end-4</code>.</p>
+        <div class="example-container grid grid-cols-4 gap-sm">
+            <div class="example-box">1</div>
+            <div class="example-box col-start-2 col-end-4">.col-start-2 .col-end-4 (Ocupa de la línea 2 a la 4)</div>
+            <div class="example-box">2</div>
+            <div class="example-box">3</div>
+        </div>
+
+         <p><code>.grid .grid-cols-3</code> con <code>.row-start-2</code>.</p>
+        <div class="example-container grid grid-cols-3 gap-sm" style="min-height: 150px;">
+             <div class="example-box">1</div>
+            <div class="example-box">2</div>
+            <div class="example-box">3</div>
+             <div class="example-box row-start-2">.row-start-2</div> <div class="example-box">4</div>
+             <div class="example-box">5</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h3>Alineación de Ítems en Celdas (`.justify-self-*`, `.align-self-*`)</h3>
+        <p>Aplica estas clases a los <strong>ítems</strong> del grid para alinearlos dentro de su propia celda.</p>
+        <p>(Requiere que la celda sea más grande que el contenido del ítem).</p>
+
+         <p><code>.grid .grid-cols-3</code> con <code>.justify-self-*</code> en ítems.</p>
+        <div class="example-container grid grid-cols-3 gap-sm" style="min-height: 100px;">
+            <div class="example-box justify-self-start">Start</div>
+            <div class="example-box justify-self-center">Center</div>
+            <div class="example-box justify-self-end">End</div>
+            <div class="example-box justify-self-stretch">Stretch (Default)</div>
+             <div class="example-box">Normal</div>
+             <div class="example-box">Normal</div>
+        </div>
+
+         <p><code>.grid .grid-cols-3</code> con <code>.align-self-*</code> en ítems.</p>
+        <div class="example-container grid grid-cols-3 gap-sm" style="min-height: 150px;"> <div class="example-box align-self-start">Start</div>
+            <div class="example-box align-self-center">Center</div>
+            <div class="example-box align-self-end">End</div>
+            <div class="example-box align-self-stretch">Stretch (Default)</div>
+            <div class="example-box">Normal</div>
+            <div class="example-box">Normal</div>
+        </div>
+    </div>
+
+     <div class="section">
+        <h3>Alineación del Contenido Grid (`.justify-content-*`, `.align-content-*`)</h3>
+        <p>Aplica estas clases al <strong>contenedor</strong> <code>.grid</code> para alinear las pistas de grid dentro del contenedor cuando hay espacio extra.</p>
+         <p>(<code>.justify-content-*</code> ya lo teníamos de Flexbox y funciona igual para el eje inline del Grid).</p>
+
+        <p><code>.grid .grid-cols-3 .justify-center</code> (alinea columnas al centro)</p>
+        <div class="example-container grid grid-cols-3 justify-center gap-sm" style="width: 80%; margin-left: auto; margin-right: auto;"> <div class="example-box">1</div>
+            <div class="example-box">2</div>
+            <div class="example-box">3</div>
+        </div>
+
+         <p><code>.grid .grid-cols-3 .align-content-center</code> (alinea filas al centro - requiere espacio vertical extra)</p>
+        <div class="example-container grid grid-cols-3 align-content-center gap-sm" style="min-height: 250px;"> <div class="example-box">1</div>
+            <div class="example-box">2</div>
+            <div class="example-box">3</div>
+            <div class="example-box">4</div>
+            <div class="example-box">5</div>
+            <div class="example-box">6</div>
+        </div>
+    </div>
+
+
+    <div style="height: 50px;"></div> </body>
+</html>
