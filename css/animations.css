@@ -1,4 +1,128 @@
-.translate {
-  transform: translate(100%, 0);
+/* --- Utilidades de Animación --- */
+
+/* --- Transiciones y Transformaciones --- */
+/* Clases que definen un estado o una transformación y le aplican una transición suave */
+/* Útiles para efectos al interactuar (hover, focus, etc.) o cuando una clase se añade/elimina con JS */
+
+/* Transición de traslación (basada en tu original) */
+/* Aplica una traslación y define que los cambios en 'transform' sean suaves */
+.translate-x-100 {
+  transform: translateX(100%); /* Sólo traslación en X */
   transition: transform 0.3s ease-in-out;
+}
+
+.translate-y-100 {
+  transform: translateY(100%); /* Sólo traslación en Y */
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Ejemplo: Escalar (cambio de tamaño suave) */
+/* Aplica un escalado y define que los cambios en 'transform' sean suaves */
+.scale-110 { /* Escala al 110% */
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.scale-90 { /* Escala al 90% */
+  transform: scale(0.9);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Ejemplo: Rotar (giro suave) */
+/* Aplica una rotación y define que los cambios en 'transform' sean suaves */
+.rotate-45 {
+  transform: rotate(45deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Ejemplo: Transición de opacidad (fundido suave) */
+/* Define un estado de opacidad y una transición para los cambios en 'opacity' */
+.opacity-0 {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.opacity-100 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Para aplicar una transición a MÚLTIPLES propiedades */
+.transition-all-ease {
+  transition: all 0.3s ease-in-out;
+}
+
+
+/* --- Definición de Animaciones (@keyframes) --- */
+/* Define los pasos clave de una animación. No se aplican directamente a un elemento, */
+/* se "llaman" usando la propiedad 'animation' en otra regla CSS. */
+
+/* Animación de desvanecimiento (aparecer) */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Animación de desvanecimiento (desaparecer) */
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+/* Animación de giro continuo */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Animación simple de rebote */
+@keyframes bounce {
+  0%, 20%, 53%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  75% {
+    transform: translateY(-15px);
+  }
+}
+
+/* Animación de pulsación (escalado sutil) */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+
+/* --- Clases para Aplicar Animaciones --- */
+/* Clases que usan la propiedad 'animation' para ejecutar un @keyframes */
+
+/* Aplicar animación fade in */
+.animate-fade-in {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+/* Aplicar animación fade out */
+.animate-fade-out {
+  animation: fadeOut 1s ease-out forwards;
+}
+
+/* Aplicar giro continuo */
+.animate-spin {
+  animation: spin 2s linear infinite;
+}
+
+/* Aplicar rebote una vez */
+.animate-bounce {
+  animation: bounce 1s ease-in-out;
+}
+
+/* Aplicar pulsación continua */
+.animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
